@@ -53,7 +53,7 @@ classifier.add(Dense(10, activation = 'softmax'))
 # Compiling the CNN
 classifier.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics = ['accuracy'])
 
-# Part 2 - Fitting the CNN to the images
+#categorical encoding of Y dataset eg if y = 5, then new y = [0, 0, 0, 0, 0, 1, 0 ,0 ,0 ,0 ]
 from keras.utils import to_categorical
 Y_train =to_categorical(Y_train) 
 Y_test = to_categorical(Y_test)
